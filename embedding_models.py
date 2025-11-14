@@ -11,7 +11,7 @@ embeddings = GoogleGenerativeAIEmbeddings(model="models/gemini-embedding-001")
 
 # embed docs
 
-documents = ["India is in Asia", "Virat is the best india cricket player", "Barcelona is a city in spain"]
+documents = ["India is in Asia", "Virat is the best india cricket player", "Barcelona is a city in spain", "messi and ronaldo are the best football players"]
 
 result = embeddings.embed_documents(documents)
 
@@ -30,7 +30,7 @@ vectorstore = InMemoryVectorStore.from_texts(
 retriever = vectorstore.as_retriever()
 
 # Retrieve the most similar text
-retrieved_documents = retriever.invoke("who is the best cricket player")
+retrieved_documents = retriever.invoke("who is the best player in games with bat stumps")
 
 # show the retrieved document's content
 print(retrieved_documents[0])
