@@ -16,7 +16,7 @@ parser = StrOutputParser()
 chain = t1 | llm | parser | t2 | llm | parser
 
 # result = chain.invoke({"topic": "godrej"})
-result = llm.invoke("write a few lines about mia khalifa")
+result = llm.invoke("write a few lines about f1")
 
 print(result)
 # print(chain.get_graph().draw_ascii())
